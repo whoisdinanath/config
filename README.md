@@ -21,4 +21,4 @@ Found a bug? Want to improve something? Open an issue or pull request. Always op
 
 MIT License - do whatever you want with these configs.
 
-Happy hacking! 🚀
+Happy hacking! 󰇵
