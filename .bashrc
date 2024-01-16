@@ -26,6 +26,7 @@ alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export PATH="$HOME/.local/bin:$HOME/.config/scripts/bash:$HOME/.config/scripts/:$PATH"
+export PATH="$HOME/.config/polybar/scripts:$PATH"
 
 #### case insensitive tab completion ####
 bind "set completion-ignore-case on"
