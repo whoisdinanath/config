@@ -1,0 +1,20 @@
+bar: polybar-git
+wm: i3
+editor: nvim code
+bar-extras: bar-gmail
+fonts: Fira Mono Nerd Font, Hack Nerd Font, Jetbrains Nerd Font, Noto Fonts Emoji
+audio: pulseaudio
+network: Network Manager
+compositor: picom
+menu: rofi
+notification: dunst
+lockscreen: lightdm betterlockscreen
+power-utility: i3-exit
+music: mpv cava
+image-viewer: feh gimp
+file-manager: thunar ranger
+terminal: alacritty
+mtp: simple-mtpfs
+pdf: zathura
+clock: tty-clock
+browser: google-chrome

@@ -1,0 +1,12 @@
+#! /bin/sh
+
+chosen=$(printf "\tChatGPT\n󰗃\tYoutube\n󰙯\tDiscord\n\tGithub" | rofi -dmenu -i -theme-str '@import "menu.rasi"')
+echo $chosen
+
+case "$chosen" in 
+    "	ChatGPT") xdg-open https://chat.openai.com/ ;;
+    "󰗃	Youtube") xdg-open https://www.youtube.com/ ;;
+    "󰙯	Discord") xdg-open https://discord.com/app ;;
+    "	Github")  xdg-open http://github.com ;; 
+    *) exit 1 ;;
+esac
