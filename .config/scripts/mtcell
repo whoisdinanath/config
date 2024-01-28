@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Create a directory to mount the device
-mkdir -p ~/cell
+mkdir -p ~/Cell
 
 # Get a list of connected MTP devices
 devices=$(simple-mtpfs -l)
@@ -9,16 +9,17 @@ devices=$(simple-mtpfs -l)
 # Prompt user to select a device using dmenu
 # Alternatively you can use fzf for a more interactive selection experience
 # selected_device=$(echo -e "DEVICES: $devices" | fzf)
-selected_device=$(echo -e "DEVICES: $devices" | dmenu)
+selected_device=$(echo -e "$devices" | dmenu)
 
 # Extract the device number from the selected device
+echo $selected_device
 device_number=$(echo $selected_device | awk '{print $1}')
 
 # Mount the selected device to the directory
-simple-mtpfs --device $device_number ~/cell
+simple-mtpfs --device $device_number ~/Cell
 
 # Print a message to confirm successful mount
-echo "Device $selected_device mounted to ~/cell"
+echo "Device $selected_device mounted to ~/Cell"
 
 
 

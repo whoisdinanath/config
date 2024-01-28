@@ -34,7 +34,6 @@ family = "Fira Code Nerd Font"
 style = "Medium Italic"
 
 
-
 [font.normal]
 family = "Fira Code Nerd Font"
 style = "Medium"
@@ -66,7 +65,7 @@ mods = "Control"
 
 [shell]
 args = ["--login"]
-program = "/usr/bin/bash"
+program = "/usr/bin/zsh"
 
 [window]
 opacity = 0.5

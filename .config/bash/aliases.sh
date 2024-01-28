@@ -2,15 +2,9 @@
 # give name of wifi and its status
 alias wifi-status="nmcli -t -f active,ssid dev wifi | grep '^yes' | cut -c 5- | cut -c 1-20"
 # list all networks scanned 
-alias scan-wifi="nmcli dev wifi rescan"
-alias list-wifi="nmcli dev wifi list"
-alias connect-wifi="nmcli dev wifi --ask connect"
-# alias connect-wifi="~/.config/scripts/bash/wifi.sh"
-alias qtile-map="cat ~/.config/qtile/config.py | grep Key"
-alias tmux-map="cat ~/.config/tmux/tmux.conf | grep bind-key"
-alias nvim-map='cat ~/.config/nvim/lua/mappings.lua | grep map'
-alias mappings="~/.config/scripts/bash/cat-mappings.sh"
-alias als="cat ~/.config/scripts/bash/aliases.sh"
+alias wifi="nmcli dev wifi rescan && nmcli dev wifi list && nmcli dev wifi --ask connect"
+
+
 
 
 alias nv="nvim"
@@ -28,11 +22,14 @@ alias ...="cd ../../"
 alias ....="cd ../../../"
 
 # Changing "ls" to "exa"
-alias ls='exa -al --color=always --group-directories-first' # my preferred listing
+alias ls='exa' # my preferred listing
 alias la='exa -a --color=always --group-directories-first'  # all files and dirs
 alias ll='exa -l --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
 alias l.='exa -a | egrep "^\."'
+
+# change directory
+alias labs='cd ~/Bibek/Course/semIV/Labs/'
 
 # pacman and yay
 alias pacsyu='sudo pacman -Syu'                  # update only standard pkgs
@@ -45,10 +42,10 @@ alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
 
 # get fastest mirrors
-alias mirrorf="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
-alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
-alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
-alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
+# alias mirrorf="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
+# alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
+# alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
+# alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
@@ -150,3 +147,5 @@ alias condown="nmcli con down"
 alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 alias mountd="sudo ntfsfix /dev/nvme0n1p5 && sudo mount /dev/nvme0n1p5 /mnt/Data"
+
+
